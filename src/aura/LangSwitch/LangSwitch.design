@@ -1,0 +1,13 @@
+<design:component>
+	<design:attribute
+                      name="btnLabel"
+                      label="ボタンの説明"
+                      description="ボタンの説明"
+                      />
+  	<design:attribute
+                      name="leftButtonString"
+                      label="左ボタン"
+                      description="左ボタン"
+                      datasource="English, Simplified_Chinese"
+                      />  
+</design:component>

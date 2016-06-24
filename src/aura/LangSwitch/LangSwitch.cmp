@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="LangSwitchController" access="global">
+    <aura:attribute name="btnLabel" type="String" default="Switch : " access="global"/>
+    <aura:attribute name="leftButtonString" type="String" default="English" access="global"/> 
+    <aura:attribute name="rightButtonString" type="String" default="Japanese" />
+ 
+    <div class="slds">
+        {!v.btnLabel}&nbsp;
+        <ui:button aura:id="leftButton" label="{!v.leftButtonString}" press="{!c.btnClick}" />
+        <ui:button aura:id="rightButton" label="{!v.rightButtonString}" press="{!c.btnClick}" />
+
+    </div>
+</aura:component>
