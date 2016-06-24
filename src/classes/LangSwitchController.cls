@@ -4,9 +4,16 @@ public with sharing class LangSwitchController {
         @AuraEnabled
         public static void setLang(String lang){
 
+           if (Schema.SObjectType.User.isAccessible() && Schema.SObjectType.User.Fields.LanguageLocaleKey.isAccessible())
+
+           {
+
                   User me = [SELECT Id, LanguageLocaleKey FROM User WHERE Id = :UserInfo.getUserId() LIMIT 1];
                   me.LanguageLocaleKey = lang2key.get(lang);
                   update me;
+
+
+           }
 
        }
         
